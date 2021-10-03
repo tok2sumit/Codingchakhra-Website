@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedList</title>
+
+    <style>
+
+        /* Styling for developer image hover and etc.*/
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+     top: 50%;
+     left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+        }
+
+        .container {
+          position: relative;
+          width: 50%;
+        }
+
+        .container:hover .image {
+          opacity: 0.3;
+        }
+        
+        .container:hover .middle {
+          opacity: 1;
+        }
+
+        .text {
+          background-color: #4CAF50;
+          color: white;
+          font-size: 16px;
+          padding: 16px 32px;
+        }
+* {
+  box-sizing: border-box;
+}
+
+.p{
+  color: black;
+  font-family: 'Times New Roman';
+  font-size: 16px;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 85%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 15%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.instanames{
+  text-align: center;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+  .hr{
+      border-bottom: 5px solid #00bcd480;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(3, 7, 22);
+  }
+  
+  /* Style the header */
+  header {
+    background-color: rgb(3, 7, 22);
+    padding: cover;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    /* position: fixed;
+    margin-bottom: ;
+    width: 100%; */
+    
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+  }
+  
+  
+ 
+  #section1{
+    background-color:#f1f1f1 ;
+    height: 600px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  #section2{
+    background-color:#f1f1f1 ;
+    height: 600px;
+  }
+ 
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+  }
+   
+  .card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+
+}
+
+hr{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+  
+  .center{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+    </style>
+    <link rel="icon"href="icon.jfif" type="image/x-icon">
+</head>
+<body>
+  <header>
+  <h1 style="text-align: center;" class="card">
+    Linked List
+   </h1>
+   </header>
+
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            
+           
+       <div class="card" style="text-align: justify;">
+       
+         A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers as shown in the below image:
+         
+       In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
+       
+       
+       Like arrays, Linked List is a linear data structure. Unlike arrays, linked list elements are not stored at a contiguous location; the elements are linked using pointers.
+       <h3>
+       Why Linked List? 
+       </h3>
+       <div style="text-align: justify;">
+       Arrays can be used to store linear data of similar types, but arrays have the following limitations. 
+       <ol>
+         <li>
+           The size of the arrays is fixed: So we must know the upper limit on the number of elements in advance. Also, generally, the allocated memory is equal to the upper limit irrespective of the usage. 
+         </li>
+         <li>
+           Inserting a new element in an array of elements is expensive because the room has to be created for the new elements and to create room existing elements have to be shifted. 
+         </li>
+       </ol>
+       For example, in a system, if we maintain a sorted list of IDs in an array id[]. 
+       id[] = [1000, 1010, 1050, 2000, 2040]. 
+       And if we want to insert a new ID 1005, then to maintain the sorted order, we have to move all the elements after 1000 (excluding 1000). 
+       Deletion is also expensive with arrays until unless some special techniques are used. For example, to delete 1010 in id[], everything after 1010 has to be moved.
+       
+       <h3>
+         Advantages over arrays 
+       </h3>
+       
+       <ol>
+         <li>
+           Dynamic size 
+         </li>
+         <li>
+           Ease of insertion/deletion
+         </li>
+       </ol>
+       
+       <h3>
+         Drawbacks: 
+       </h3>
+       <ol>
+         <li>
+           Random access is not allowed. We have to access elements sequentially starting from the first node. So we cannot do binary search with linked lists efficiently with its default implementation.
+         </li>
+         <li>
+           Extra memory space for a pointer is required with each element of the list. 
+         </li>
+         <li>
+           Not cache friendly. Since array elements are contiguous locations, there is locality of reference which is not there in case of linked lists.
+         </li>
+       </ol>
+       
+       
+       <h3>
+         Representation: 
+       </h3>
+       
+       A linked list is represented by a pointer to the first node of the linked list. The first node is called the head. If the linked list is empty, then the value of the head is NULL. 
+       Each node in a list consists of at least two parts: 
+       <ol>
+         <li>
+            data 
+         </li>
+         <li>
+            Pointer (Or Reference) to the next node 
+         </li>
+       </ol>
+         In C, we can represent a node using structures. Below is an example of a linked list node with integer data. 
+         <br>
+         In Java or C#, LinkedList can be represented as a class and a Node as a separate class. The LinkedList class contains a reference of Node class type. 
+       </div>
+       <br> 
+       <img class="center" style="width:70%" src="LL.png" />
+       </div>      
+       <br> 
+       <iframe class="center" width="500" height="320" src="https://www.youtube.com/embed/njTh_OwMljA" controls>
+       </iframe>
+       <br> 
+       
+       
+       <div data-pym-src=
+       "https://www.jdoodle.com/embed/v0/3oKP?stdin=1&arg=0">
+       </div>
+       
+       <!-- This script tag contains the 
+         javascript code in the written URL -->
+         <script src=
+       "https://www.jdoodle.com/assets/jdoodle-pym.min.js"
+               type="text/javascript">
+           </script>
+          </div>
+          
+           
+
+                
+                
+          
+          </div>
+        
+        <div class="rightcolumn">
+          <div class="card">
+            <h2 style="text-align: center;">About US</h2>
+            
+            <div class="container">
+                <img src="male.jfif" alt="Avatar"  style="width:100%; margin-left: 30px;"  >
+                
+                <div class="middle" style=" margin-left: 30px;">
+                  <div class="text">Sumit Singh</div>
+                </div>
+              </div>
+      
+              <div class="container">
+                  <img src="female.jfif" alt="Avatar"  style="width:100%; margin-left: 30px;">
+                  
+                  <div class="middle" style=" margin-left: 30px;">
+                    <div class="text">Jhanvi pandya</div>
+                  </div>
+                </div>
+            
+            <p style="text-align: center;">This is our <br> E-Learning Website.</p>
+            
+          </div>
+          <div class="card">
+            <h3 style="text-align: center;">Websites you can refer</h3>
+            <a href = "https://www.geeksforgeeks.org/" target="iframe_a"> 
+                <img src = "gfg.jfif" alt = "Geeksforgeeks" style="width: 90%;height: 100px;"/> 
+             </a> 
+             <p>
+             <a href = "https://www.coursera.org/in" target="iframe_a"> 
+                <img src = "cousera.jfif" alt = "coursera" style="width: 100%;height: px;"/>  
+             </a> 
+            
+          </img>
+          </div>
+          <div class="card">
+            <h3 style="text-align: center;">Follow Us</h3>
+            <p style="text-align: right;"> <img src="insta.jfif" width="80%" height="80%" style="margin-right: 12px;" >
+              <div class="insanames" style="margin-left: 15px;"> 
+              @sumitsingh4653
+              </div>
+            <br>
+            <div class="insanames"style="margin-left: 15px;"> 
+            @jhanvipandya01
+            </div>
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+
+
+
+<script>
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedList</title>
+
+    <style>
+
+        /* Styling for developer image hover and etc.*/
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+     top: 50%;
+     left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+        }
+
+        .container {
+          position: relative;
+          width: 50%;
+        }
+
+        .container:hover .image {
+          opacity: 0.3;
+        }
+        
+        .container:hover .middle {
+          opacity: 1;
+        }
+
+        .text {
+          background-color: #4CAF50;
+          color: white;
+          font-size: 16px;
+          padding: 16px 32px;
+        }
+* {
+  box-sizing: border-box;
+}
+
+.p{
+  color: black;
+  font-family: 'Times New Roman';
+  font-size: 16px;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 85%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 15%;
+  padding-left: 20px;
+}
+
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.instanames{
+  text-align: center;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+  .hr{
+      border-bottom: 5px solid #00bcd480;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(3, 7, 22);
+  }
+  
+  /* Style the header */
+  header {
+    background-color: rgb(3, 7, 22);
+    padding: cover;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    /* position: fixed;
+    margin-bottom: ;
+    width: 100%; */
+    
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+  }
+  
+  
+ 
+  #section1{
+    background-color:#f1f1f1 ;
+    height: 600px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  #section2{
+    background-color:#f1f1f1 ;
+    height: 600px;
+  }
+ 
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+  }
+   
+  .card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+
+}
+
+hr{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+  
+  .center{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+    </style>
+    <link rel="icon"href="icon.jfif" type="image/x-icon">
+</head>
+<body>
+  <header>
+  <h1 style="text-align: center;" class="card">
+    Java
+   </h1>
+   </header>
+
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            
+          
+            <div class="card">
+              
+            <img src="java.png" style="width: 50%;padding: 10px; height: 50%;float: left;"></img>
+            <p style="text-align: justify;font-size: 16px;">
+              Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let application developers write once, run anywhere (WORA),meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to C and C++, but has fewer low-level facilities than either of them. The Java runtime provides dynamic capabilities (such as reflection and runtime code modification) that are typically not available in traditional compiled languages. As of 2019, Java was one of the most popular programming languages in use according to GitHub,particularly for client-server web applications, with a reported 9 million developers.
+
+Java was originally developed by James Gosling at Sun Microsystems (which has since been acquired by Oracle) and released in 1995 as a core component of Sun Microsystems' Java platform. The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary licenses. As of May 2007, in compliance with the specifications of the Java Community Process, Sun had relicensed most of its Java technologies under the GNU General Public License. Oracle offers its own HotSpot Java Virtual Machine, however the official reference implementation is the OpenJDK JVM which is free open source software and used by most developers and is the default JVM for almost all Linux distributions.
+
+As of March 2021, the latest version is Java 16, with Java 11, a currently supported long-term support (LTS) version, released on September 25, 2018. Oracle released the last zero-cost public update for the legacy version Java 8 LTS in January 2019 for commercial use, although it will otherwise still support Java 8 with public updates for personal use indefinitely. Other vendors have begun to offer zero-cost builds of OpenJDK 8 and 11 that are still receiving security and other upgrades.
+
+Oracle (and others) highly recommend uninstalling outdated versions of Java because of serious risks due to unresolved security issues.Since Java 9, 10, 12, 13, 14, and 15 are no longer supported, Oracle advises its users to immediately transition to the latest version (currently Java 16) or an LTS release.
+            </p>
+            <img src="JVM ARCHITECTURE.png" style="width: 50%;padding: 10px; height: 50%;float: left;"></img>
+            <p style="text-align: justify;">
+              One design goal of Java is portability, which means that programs written for the Java platform must run similarly on any combination of hardware and operating system with adequate run time support. This is achieved by compiling the Java language code to an intermediate representation called Java bytecode, instead of directly to architecture-specific machine code. Java bytecode instructions are analogous to machine code, but they are intended to be executed by a virtual machine (VM) written specifically for the host hardware. End users commonly use a Java Runtime Environment (JRE) installed on their machine for standalone Java applications, or in a web browser for Java applets.
+
+Standard libraries provide a generic way to access host-specific features such as graphics, threading, and networking.
+
+The use of universal bytecode makes porting simple. However, the overhead of interpreting bytecode into machine instructions made interpreted programs almost always run more slowly than native executables. Just-in-time (JIT) compilers that compile byte-codes to machine code during runtime were introduced from an early stage. Java itself is platform-independent and is adapted to the particular platform it is to run on by a Java virtual machine (JVM) for it, which translates the Java bytecode into the platform's machine language.
+Java uses an automatic garbage collector to manage memory in the object lifecycle. The programmer determines when objects are created, and the Java runtime is responsible for recovering the memory once objects are no longer in use. Once no references to an object remain, the unreachable memory becomes eligible to be freed automatically by the garbage collector. Something similar to a memory leak may still occur if a programmer's code holds a reference to an object that is no longer needed, typically when objects that are no longer needed are stored in containers that are still in use. If methods for a non-existent object are called, a null pointer exception is thrown.
+
+One of the ideas behind Java's automatic memory management model is that programmers can be spared the burden of having to perform manual memory management. In some languages, memory for the creation of objects is implicitly allocated on the stack or explicitly allocated and deallocated from the heap. In the latter case, the responsibility of managing memory resides with the programmer. If the program does not deallocate an object, a memory leak occurs. If the program attempts to access or deallocate memory that has already been deallocated, the result is undefined and difficult to predict, and the program is likely to become unstable or crash. This can be partially remedied by the use of smart pointers, but these add overhead and complexity. Note that garbage collection does not prevent logical memory leaks, i.e. those where the memory is still referenced but never used.
+
+Garbage collection may happen at any time. Ideally, it will occur when a program is idle. It is guaranteed to be triggered if there is insufficient free memory on the heap to allocate a new object; this can cause a program to stall momentarily. Explicit memory management is not possible in Java.
+<br>
+<br>
+<br>
+            <iframe class="center" width="500" height="320" src="https://www.youtube.com/embed/mAtkPQO1FcA" controls>
+            </iframe>
+            <br>            
+</p>
+          </div>
+        </div>
+      </div>
+        
+        <div class="rightcolumn">
+          <div class="card">
+            <h2 style="text-align: center;">About US</h2>
+            
+            <div class="container">
+                <img src="male.jfif" alt="Avatar"  style="width:100%; margin-left: 30px;"  >
+                
+                <div class="middle" style=" margin-left: 30px;">
+                  <div class="text">Sumit Singh</div>
+                </div>
+              </div>
+      
+              <div class="container">
+                  <img src="female.jfif" alt="Avatar"  style="width:100%; margin-left: 30px;">
+                  
+                  <div class="middle" style=" margin-left: 30px;">
+                    <div class="text">Jhanvi pandya</div>
+                  </div>
+                </div>
+            
+            <p style="text-align: center;">This is our <br> E-Learning Website.</p>
+            
+          </div>
+          <div class="card">
+            <h3 style="text-align: center;">Websites you can refer</h3>
+            <a href = "https://www.geeksforgeeks.org/" target="iframe_a"> 
+                <img src = "gfg.jfif" alt = "Geeksforgeeks" style="width: 90%;height: 100px;"/> 
+             </a> 
+             <p>
+             <a href = "https://www.coursera.org/in" target="iframe_a"> 
+                <img src = "cousera.jfif" alt = "coursera" style="width: 100%;height: px;"/>  
+             </a> 
+            
+          </img>
+          </div>
+          <div class="card">
+            <h3 style="text-align: center;">Follow Us</h3>
+            <p style="text-align: right;"> <img src="insta.jfif" width="80%" height="80%" style="margin-right: 12px;" >
+              <div class="insanames" style="margin-left: 15px;"> 
+              @sumitsingh4653
+              </div>
+            <br>
+            <div class="insanames"style="margin-left: 15px;"> 
+            @jhanvipandya01
+            </div>
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+
+
+
+<script>
+    
+</script>
+
+</body>
+</html>

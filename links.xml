@@ -1,0 +1,30 @@
+<pages>
+    <link>
+        <title>Data Structures</title>
+        <url>Data_Structures.html</url>
+    </link>
+    <link>
+        <title>DSA</title>
+        <url>Data_Structures.html</url>
+    </link>
+    <link>
+        <title>Videos</title>
+        <url>Videos.html</url>
+    </link>
+    <link>
+        <title>Stacks</title>
+        <url>Stacks.html</url>
+    </link>
+    <link>
+        <title>Queues</title>
+        <url>Queues.html</url>
+    </link>
+    <link>
+        <title>Algorithm</title>
+        <url>Algorithms.html</url>
+    </link>
+    <link>
+        <title>Time Complexity</title>
+        <url>Videos.html</url>
+    </link>
+</pages>

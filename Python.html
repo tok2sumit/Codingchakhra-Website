@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedList</title>
+
+    <style>
+
+        /* Styling for developer image hover and etc.*/
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+     top: 50%;
+     left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+        }
+
+        .container {
+          position: relative;
+          width: 50%;
+        }
+
+        .container:hover .image {
+          opacity: 0.3;
+        }
+        
+        .container:hover .middle {
+          opacity: 1;
+        }
+
+        .text {
+          background-color: #4CAF50;
+          color: white;
+          font-size: 16px;
+          padding: 16px 32px;
+        }
+* {
+  box-sizing: border-box;
+}
+
+.p{
+  color: black;
+  font-family: 'Times New Roman';
+  font-size: 16px;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 85%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 15%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.instanames{
+  text-align: center;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+  .hr{
+      border-bottom: 5px solid #00bcd480;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(3, 7, 22);
+  }
+  
+  /* Style the header */
+  header {
+    background-color: rgb(3, 7, 22);
+    padding: cover;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    /* position: fixed;
+    margin-bottom: ;
+    width: 100%; */
+    
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+  }
+  
+  
+ 
+  #section1{
+    background-color:#f1f1f1 ;
+    height: 600px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  #section2{
+    background-color:#f1f1f1 ;
+    height: 600px;
+  }
+ 
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+  }
+   
+  .card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+
+}
+
+hr{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+  
+  .center{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+    </style>
+    <link rel="icon"href="icon.jfif" type="image/x-icon">
+</head>
+<body>
+  <header>
+  <h1 style="text-align: center;" class="card">
+    Python
+   </h1>
+   </header>
+
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            
+          
+            <div class="card">
+				<img class="center" src="pythonlogo.jfif" style="width: 40%;padding: 10px; height: 40%;float: left;" />
+				<p style="text-align: justify;">
+					Python is an interpreted high-level general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation. Its language constructs as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
+
+Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented and functional programming. Python is often described as a "batteries included" language due to its comprehensive standard library.
+
+Guido van Rossum began working on Python in the late 1980s, as a successor to the ABC programming language, and first released it in 1991 as Python 0.9.0. Python 2.0 was released in 2000 and introduced new features, such as list comprehensions and a garbage collection system using reference counting. Python 3.0 was released in 2008 and was a major revision of the language that is not completely backward-compatible and much Python 2 code does not run unmodified on Python 3. Python 2 was discontinued with version 2.7.18 in 2020.
+<br>
+<br>
+Python consistently ranks as one of the most popular programming languages.
+Python was conceived in the late 1980s by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands as a successor to ABC programming language, which was inspired by SETL,capable of exception handling and interfacing with the Amoeba operating system. Its implementation began in December 1989.Van Rossum shouldered sole responsibility for the project, as the lead developer, until 12 July 2018, when he announced his "permanent vacation" from his responsibilities as Python's Benevolent Dictator For Life, a title the Python community bestowed upon him to reflect his long-term commitment as the project's chief decision-maker. In January 2019, active Python core developers elected a 5-member "Steering Council" to lead the project.As of 2021, the current members of this council are Barry Warsaw, Brett Cannon, Carol Willing, Thomas Wouters, and Pablo Galindo Salgado.
+<br>
+
+<br>
+Python's developers strive to avoid premature optimization, and reject patches to non-critical parts of the CPython reference implementation that would offer marginal increases in speed at the cost of clarity.[68] When speed is important, a Python programmer can move time-critical functions to extension modules written in languages such as C, or use PyPy, a just-in-time compiler. Cython is also available, which translates a Python script into C and makes direct C-level API calls into the Python interpreter.
+			    </p>
+              
+             
+      
+            
+            </div>
+            <br>
+            <iframe class="center" width="500" height="320" src="https://www.youtube.com/embed/WvhQhj4n6b8" controls>
+            </iframe>
+            <br>
+                
+            
+                
+       
+          </div>
+          </div>
+        
+        <div class="rightcolumn">
+          <div class="card">
+            <h2 style="text-align: center;">About US</h2>
+            
+            <div class="container">
+                <img src="male.jfif" alt="Avatar"  style="width:100%; margin-left: 30px;"  >
+                
+                <div class="middle" style=" margin-left: 30px;">
+                  <div class="text">Sumit Singh</div>
+                </div>
+              </div>
+      
+              <div class="container">
+                  <img src="female.jfif" alt="Avatar"  style="width:100%; margin-left: 30px;">
+                  
+                  <div class="middle" style=" margin-left: 30px;">
+                    <div class="text">Jhanvi pandya</div>
+                  </div>
+                </div>
+            
+            <p style="text-align: center;">This is our <br> E-Learning Website.</p>
+            
+          </div>
+          <div class="card">
+            <h3 style="text-align: center;">Websites you can refer</h3>
+            <a href = "https://www.geeksforgeeks.org/" target="iframe_a"> 
+                <img src = "gfg.jfif" alt = "Geeksforgeeks" style="width: 90%;height: 100px;"/> 
+             </a> 
+             <p>
+             <a href = "https://www.coursera.org/in" target="iframe_a"> 
+                <img src = "cousera.jfif" alt = "coursera" style="width: 100%;height: px;"/>  
+             </a> 
+            
+          </img>
+          </div>
+          <div class="card">
+            <h3 style="text-align: center;">Follow Us</h3>
+            <p style="text-align: right;"> <img src="insta.jfif" width="80%" height="80%" style="margin-right: 12px;" >
+              <div class="insanames" style="margin-left: 15px;"> 
+              @sumitsingh4653
+              </div>
+            <br>
+            <div class="insanames"style="margin-left: 15px;"> 
+            @jhanvipandya01
+            </div>
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+
+
+
+<script>
+    
+</script>
+
+</body>
+</html>

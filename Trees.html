@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedList</title>
+
+    <style>
+
+        /* Styling for developer image hover and etc.*/
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+     top: 50%;
+     left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+        }
+
+        .container {
+          position: relative;
+          width: 50%;
+        }
+
+        .container:hover .image {
+          opacity: 0.3;
+        }
+        
+        .container:hover .middle {
+          opacity: 1;
+        }
+
+        .text {
+          background-color: #4CAF50;
+          color: white;
+          font-size: 16px;
+          padding: 16px 32px;
+        }
+* {
+  box-sizing: border-box;
+}
+
+.p{
+  color: black;
+  font-family: 'Times New Roman';
+  font-size: 16px;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 85%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 15%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.instanames{
+  text-align: center;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+  .hr{
+      border-bottom: 5px solid #00bcd480;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(3, 7, 22);
+  }
+  
+  /* Style the header */
+  header {
+    background-color: rgb(3, 7, 22);
+    padding: cover;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    /* position: fixed;
+    margin-bottom: ;
+    width: 100%; */
+    
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+  }
+  
+  
+ 
+  #section1{
+    background-color:#f1f1f1 ;
+    height: 600px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  #section2{
+    background-color:#f1f1f1 ;
+    height: 600px;
+  }
+ 
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+  }
+   
+  .card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+
+}
+
+hr{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+  
+  .center{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+    </style>
+    <link rel="icon"href="icon.jfif" type="image/x-icon">
+</head>
+<body>
+  <header>
+  <h1 style="text-align: center;" class="card">
+    Trees
+   </h1>
+   </header>
+
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            
+          
+            <div class="card">
+          A tree data structure can be defined recursively as a collection of nodes (starting at a root node), where each node is a data structure consisting of a value, together with a list of references to nodes (the "children"), with the constraints that no reference is duplicated, and none points to the root.
+          <br> 
+          <br> 
+              Traversal is a process to visit all the nodes of a tree and may print their values too. Because, all nodes are connected via edges (links) we always start from the root (head) node. That is, we cannot random access a node in a tree. There are three ways which we use to traverse a tree −
+              <br> 
+              <ul>
+        
+          <li>In-order Traversal</li>
+          <li>Pre-order Traversal</li>
+          <li>Post-order Traversal</li>
+        </ul>
+          
+        <img  class="center" style="width:70%" src="tree.png" />
+        </div>
+              <br> 
+              <iframe class="center" width="500" height="320" src="https://www.youtube.com/embed/oSWTXtMglKE" controls>
+              </iframe>
+              <br> 
+              
+              
+              <div data-pym-src=
+              "https://www.jdoodle.com/embed/v0/3oKQ?stdin=1&arg=0">
+            </div>
+            
+            <!-- This script tag contains the 
+              javascript code in the written URL -->
+              <script src=
+              "https://www.jdoodle.com/assets/jdoodle-pym.min.js"
+              type="text/javascript">
+            </script>
+       
+          </div>
+          </div>
+        
+        <div class="rightcolumn">
+          <div class="card">
+            <h2 style="text-align: center;">About US</h2>
+            
+            <div class="container">
+                <img src="male.jfif" alt="Avatar"  style="width:100%; margin-left: 30px;"  >
+                
+                <div class="middle" style=" margin-left: 30px;">
+                  <div class="text">Sumit Singh</div>
+                </div>
+              </div>
+      
+              <div class="container">
+                  <img src="female.jfif" alt="Avatar"  style="width:100%; margin-left: 30px;">
+                  
+                  <div class="middle" style=" margin-left: 30px;">
+                    <div class="text">Jhanvi pandya</div>
+                  </div>
+                </div>
+            
+            <p style="text-align: center;">This is our <br> E-Learning Website.</p>
+            
+          </div>
+          <div class="card">
+            <h3 style="text-align: center;">Websites you can refer</h3>
+            <a href = "https://www.geeksforgeeks.org/" target="iframe_a"> 
+                <img src = "gfg.jfif" alt = "Geeksforgeeks" style="width: 90%;height: 100px;"/> 
+             </a> 
+             <p>
+             <a href = "https://www.coursera.org/in" target="iframe_a"> 
+                <img src = "cousera.jfif" alt = "coursera" style="width: 100%;height: px;"/>  
+             </a> 
+            
+          </img>
+          </div>
+          <div class="card">
+            <h3 style="text-align: center;">Follow Us</h3>
+            <p style="text-align: right;"> <img src="insta.jfif" width="80%" height="80%" style="margin-right: 12px;" >
+              <div class="insanames" style="margin-left: 15px;"> 
+              @sumitsingh4653
+              </div>
+            <br>
+            <div class="insanames"style="margin-left: 15px;"> 
+            @jhanvipandya01
+            </div>
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+
+
+
+<script>
+    
+</script>
+
+</body>
+</html>

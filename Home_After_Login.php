@@ -340,7 +340,7 @@ html {
     
 
     <div class="topnav">
-      <a class="active" href="Home.html">Home</a>
+      <a class="active" href="index.php">Home</a>
       <div class="dropdown">
         <button class="dropbtn" style="color: black;">Data Structure
           <i class="fa fa-caret-down"></i>
